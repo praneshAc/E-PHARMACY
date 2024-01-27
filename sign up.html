@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-
+alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+crossorigin="anonymous">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="sign up.css" />
+</head>
+<body>
+<script>
+
+function validateform() {
+var name = document.myform.name.value;
+var password = document.myform.password.value;
+var password1 = document.myform.password1.value;
+var email = document.myform.email.value;
+var phone = document.myform.phone.value;
+
+if (name == null || name == "") {
+alert("Name can't be blank");
+return false;
+}
+if (password == "") {
+alert("Please enter your password");
+return false;
+}
+if (password.length < 8) {
+alert("Password should be atleast 8 characters");
+return false;
+}
+if (password1.length < 8) {
+alert("Password should be atleast 8 characters");
+return false;
+}
+if (password != password1) {
+alert("Password mismatch");
+return false;
+}
+if (password.length != "") {
+var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+if (regex.test(password) === false) {
+alert("Password should contain atleast 1 Uppercase, 1 Lowercase, 1 Number, 1 Specialcharacters");
+return false;
+}
+}
+if (email == null || email == "") {
+alert("Please enter your mail id");
+return false;
+}
+if (phone == null || phone == "") {
+alert("Please enter your Phone Number");
+return false;
+}
+if (phone.length < 10 || phone.length > 10) {
+alert("It should contain 10 digits only");
+return false;
+}
+
+if (date == "" || date == null) {
+alter("Please enter the date");
+return false;
+}
+}
+window.addEventListener( "load", start, false );
+function start()
+{
+document.getElementById("name").addEventListener("focus",focusone, false );
+document.getElementById("name").addEventListener("blur", blurone, false );
+document.getElementById("password").addEventListener("focus",focustwo, false );
+document.getElementById("password").addEventListener("blur", blurtwo, false );
+document.getElementById("password1").addEventListener("focus",focusthree, false );
+document.getElementById("password1").addEventListener("blur", blurthree, false );
+document.getElementById("email").addEventListener("focus",focusfour, false );
+document.getElementById("email").addEventListener("blur", blurfour, false );
+document.getElementById("phone").addEventListener("focus",focusfive, false );
+document.getElementById("phone").addEventListener("blur", blurfive, false );
+}
+function focusone()
+{document.getElementById("help").innerHTML="Enter name" ;
+}
+function blurone()
+{ document.getElementById("help").innerHTML="" ;
+}
+function focustwo()
+{document.getElementById("help1").innerHTML="Enter password" ;
+}
+function blurtwo()
+{ document.getElementById("help1").innerHTML="" ;
+}
+function focusthree()
+{document.getElementById("help2").innerHTML="Enter conform password" ;
+}
+function blurthree()
+{ document.getElementById("help2").innerHTML="" ;
+}
+function focusfour()
+{document.getElementById("help3").innerHTML="Enter E-mail" ;
+}
+function blurfour()
+{ document.getElementById("help3").innerHTML="" ;
+}
+function focusfive()
+{document.getElementById("help4").innerHTML="Enter Phone Number" ;
+}
+function blurfive()
+{ document.getElementById("help4").innerHTML="" ;
+}
+
+</script>
+<body>
+<div class="header" style="margin-top: 20%;">
+<h3>Sign in</h3>
+<form name="myform" method="post" action="" onsubmit="return validateform()"
+style="margin-left: 30px;margin-top: 30px; align-content: center;">
+Name: <input type="text" name="name" id="name"><br />
+<p id="help"></p>
+Password: <input type="password" name="password" id="password"><br />
+<p id="help1"></p>
+Confirm Password: <input type="password" name="password1" id="password1"><br />
+<p id="help2"></p>
+E-mail: <input type="email" name="email" id="email"><br />
+<p id="help3"></p>
+Phone number: <input type="text" name="phone" id="phone"><br />
+<p id="help4"></p>
+<label>DOB</label>
+<input type="date" name="date" /><br><br>
+<button id="b2"onclick="return
+validateform()"formaction="http://localhost:3000/save">Submit</button>
+</a>
+</form>
+<div class="para-2">
+Already have an account?    <a href="login page.html">Login here</a>
+</div>
+</div>
+</body>
+</html>

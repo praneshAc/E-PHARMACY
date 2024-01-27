@@ -1,0 +1,73 @@
+body{
+    background-image: url("./images/bg_1.jpg");
+    justify-content: center;
+
+align-items: center;
+height: 130vh;
+margin:0;
+background-size: cover;
+
+width: 500px;
+height: 520px;
+margin: auto;
+background-color: white;
+
+border-radius: 3px;
+}
+.login{
+    background-color:rgb(255, 255, 255);
+    height: 320px;
+    width: 400px;
+    margin: auto;
+    margin-top: 200px;
+}
+form
+{
+    margin-left: 40px;
+    width: 300px;
+    
+}
+form label
+{
+  
+    display: flex;
+    margin-top: 35px;
+    font-size: 18px;
+   
+}
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+form input{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+
+}
+.btn
+{
+    outline: none;
+    margin-top: 30px;
+    width: 320px;
+    background-color: rgb(43, 226, 89);
+    color: green;
+    font-size: 18px;
+    cursor: pointer;
+}
+.para
+{
+    margin-top: -50px;
+    text-align: center;
+    color: rgb(10, 0, 0);
+}
+.para a{
+    color:rgb(7, 7, 7);
+}
+#b1{
+    background-color: rgb(173, 204, 204);
+    margin-top: 25px;
+}
